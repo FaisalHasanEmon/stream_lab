@@ -16,15 +16,15 @@ const NavBar = () => {
   };
 
   return (
-    <div className="container mx-auto ">
-      <div className="flex justify-between items-center gap-2 px-4 py-3 lg:px-5">
+    <div className="absolute left-0 z-20  w-full">
+      <div className="flex justify-between items-center gap-2 px-4 py-3 lg:px-5 container mx-auto">
         {/* Logo */}
         <figure className="w-[80px] sm:w-[100px] lg:w-[120px] flex-shrink-0">
           <img src="/Logo/Logo.png" alt="Logo" className="w-full h-auto" />
         </figure>
 
         {/* Desktop Search - Hidden on mobile/tablet */}
-        <div className="relative  hidden lg:flex justify-center items-center w-5/12 xl:w-4/12">
+        <div className="relative  hidden lg:flex justify-center items-center w-5/12 xl:w-7/12">
           <input
             type="text"
             placeholder="Search Films"
