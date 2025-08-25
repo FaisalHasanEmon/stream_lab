@@ -9,14 +9,14 @@ const Footer = () => {
   ];
   return (
     <div className="bg-[#272727] py-[60px]">
-      <div className=" container mx-auto px-5 flex flex-col items-center justify-center space-y-[60px]">
-        <figure className="mx-auto">
+      <div className=" container mx-auto px-5 flex flex-col items-center justify-center space-y-[30px] md:space-y-[60px]">
+        <figure className="w-[120px]">
           <img src="/Logo/Logo.png" alt="Logo" />
         </figure>
 
-        <ul className=" flex justify-center items-center gap-[50px]">
+        <ul className=" flex flex-col md:flex-row justify-center items-center gap-[18px] md:gap-[50px]">
           {footerTabs?.map((item) => (
-            <li className="text-2xl font-normal" key={item?.id}>
+            <li className="text-lg font-normal" key={item?.id}>
               <Link to={item?.link}>{item?.text}</Link>
             </li>
           ))}
