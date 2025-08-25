@@ -194,11 +194,11 @@ const HeroCarousel = () => {
                     : "opacity-0 translate-y-12"
                 }`}
               >
-                <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105">
+                <button className="flex items-center gap-2 bg-bluePrimary hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105">
                   <Play size={20} />
                   Watch Now
                 </button>
-                <button className="border border-white/30 hover:border-white/60 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-white/10">
+                <button className="border border-bluePrimary hover:border-bluePrimary/60 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-white/10">
                   Trailer
                 </button>
               </div>
