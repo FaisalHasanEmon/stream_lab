@@ -46,6 +46,7 @@
 
 import React from "react";
 import { Play, Clock, Share2 } from "lucide-react";
+import { FaShareFromSquare } from "react-icons/fa6";
 
 const MovieCard = ({ movie }) => {
   // Format duration from minutes to hours and minutes
@@ -56,18 +57,18 @@ const MovieCard = ({ movie }) => {
   };
 
   return (
-    <div className="bg-[#272727] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div className="bg-[#272727] rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
       {/* Movie Poster with Trailer Button */}
       <div className="relative aspect-[16/10] p-4 pb-0">
         <img
           src={movie.thumbnail_url}
           alt={movie.title}
-          className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300"
         />
 
         {/* Trailer Button Overlay */}
         <div className="absolute bottom-3 left-7">
-          <button className="bg-[#B9341C] text-white px-3 py-1.5 rounded-md flex items-center gap-2 text-sm font-medium hover:bg-[#9e2e18] transition-colors duration-200">
+          <button className="bg-[#B9341C] text-white px-3 py-1.5 rounded-4xl flex items-center gap-2 text-sm font-medium hover:bg-[#9e2e18] transition-colors duration-200">
             <Play size={14} fill="white" />
             Trailer
           </button>
@@ -111,14 +112,14 @@ const MovieCard = ({ movie }) => {
 
         {/* Action Buttons */}
         <div className="flex gap-2 pt-3">
-          <button className="flex-1 bg-blue-500 hover:bg-blue-600 text-white py-2.5 px-4 rounded-md font-medium transition-colors duration-200">
+          <button className="flex-1 bg-bluePrimary hover:bg-blue-600 text-white py-2.5 px-4 rounded-md font-medium transition-colors duration-200">
             Rent
           </button>
-          <button className="flex-1 bg-transparent border border-gray-600 hover:border-gray-500 text-white py-2.5 px-4 rounded-md font-medium transition-colors duration-200">
+          <button className="flex-1 bg-transparent border border-bluePrimary hover:border-blue-500 text-white py-2.5 px-4 rounded-md font-medium transition-colors duration-200">
             Buy
           </button>
-          <button className="bg-transparent border border-gray-600 hover:border-gray-500 text-white p-2.5 rounded-md transition-colors duration-200">
-            <Share2 size={16} />
+          <button className="bg-transparent   text-bluePrimary p-2.5 rounded-md transition-colors duration-200">
+            <FaShareFromSquare size={24} />
           </button>
         </div>
       </div>
