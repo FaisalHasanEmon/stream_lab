@@ -35,12 +35,12 @@ const NavBar = () => {
 
         {/* Desktop Auth Buttons - Hidden on mobile */}
         <div className="hidden lg:flex justify-center items-center gap-3 xl:gap-5">
-          <Link>
+          <Link to="/signin">
             <button className="text-sm xl:text-lg font-normal px-3 xl:px-4 py-2 rounded-[8px] text-white bg-[#00A1FF] hover:bg-[#0086D9] transition-colors">
               Sign In
             </button>
           </Link>
-          <Link>
+          <Link to="/signup">
             <button className="text-sm xl:text-lg font-normal px-3 xl:px-4 py-2 rounded-[8px] border border-[#00A1FF] text-[#00A1FF] bg-transparent hover:bg-[#00A1FF] hover:text-white transition-colors">
               Sign Up
             </button>
@@ -88,12 +88,12 @@ const NavBar = () => {
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute border border-[#00A1FF] bg-[#00A1FF]/10 backdrop-blur-3xl rounded-[8px] w-8/12 px-4 py-4 transform translate-x-[40%] ">
           <div className="flex flex-col gap-3">
-            <Link>
+            <Link to="/signin">
               <button className="w-full text-base font-normal px-4 py-3 rounded-[8px] text-white bg-[#00A1FF] hover:bg-[#0086D9] transition-colors">
                 Sign In
               </button>
             </Link>
-            <Link>
+            <Link to="/signup">
               <button className="w-full text-base font-normal px-4 py-3 rounded-[8px] border border-[#00A1FF] text-[#00A1FF] bg-transparent hover:bg-[#00A1FF] hover:text-white transition-colors">
                 Sign Up
               </button>
