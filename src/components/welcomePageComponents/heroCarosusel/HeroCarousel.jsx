@@ -129,7 +129,11 @@ const HeroCarousel = () => {
       }  overflow-hidden `}
     >
       {/* Background Images with Transition */}
-      <div className="absolute inset-0 container mx-auto">
+      <div
+        className={`absolute inset-0  ${
+          atUserDashBoard ? "ml-0" : "container mx-auto"
+        } `}
+      >
         {moviesData.map((movie, index) => (
           <div
             key={movie.id}
