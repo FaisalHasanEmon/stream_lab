@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Play } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 const moviesData = [
   {
@@ -85,6 +86,12 @@ const HeroCarousel = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [contentVisible, setContentVisible] = useState(true);
 
+  const location = useLocation();
+
+  const atUserDashBoard = location?.pathname.includes("/userDashboard/watch")
+    ? true
+    : false;
+
   // Auto-slide every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
@@ -116,7 +123,11 @@ const HeroCarousel = () => {
   const currentMovie = moviesData[currentSlide];
 
   return (
-    <div className="relative h-screen overflow-hidden ">
+    <div
+      className={`relative ${
+        atUserDashBoard ? "h-full" : "h-screen"
+      }  overflow-hidden `}
+    >
       {/* Background Images with Transition */}
       <div className="absolute inset-0 container mx-auto">
         {moviesData.map((movie, index) => (
@@ -133,7 +144,9 @@ const HeroCarousel = () => {
             <img
               src={movie.thumbnail_url}
               alt={movie.title}
-              className="h-full w-full object-cover"
+              className={`h-full w-full ${
+                atUserDashBoard ? "object-cover object-top " : "object-cover"
+              } `}
             />
             <div className="absolute inset-0 bg-[linear-gradient(to_right,_theme(colors.blackPrimary),_rgba(0,0,0,0.5),_theme(colors.blackPrimary)),linear-gradient(to_top,_theme(colors.blackPrimary),_transparent)]" />
           </div>
