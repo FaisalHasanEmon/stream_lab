@@ -1,5 +1,5 @@
 import AllMovies from "../../../components/welcomePageComponents/allMovies/AllMovies";
-import HeroCarousel from "../../../components/welcomePageComponents/heroCarosusel/heroCarousel";
+import HeroCarousel from "../../../components/welcomePageComponents/heroCarosusel/HeroCarousel";
 
 const Watch = () => {
   return (
